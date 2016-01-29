@@ -1,7 +1,7 @@
 # Banking_System
 
 # Description
-This is a simple banking accounts system that permits users to transfer money from one of their account to the desiderated account. An accurate description of the system is contained in the file Banking_System/source/program_description.docx.
+This is a simple banking accounts system that permits users to transfer money from one of their accounts to the desiderated account. An accurate description of the system is contained in the file Banking_System/source/program_description.docx.
 
 # Input
 Input files are contained in the folder Banking_System/bin/Test/Input and are divided into two folders: Accounts_data and adj_matrices. Folder adj_matrices contains the adjacency matrices representing the networks of banking accounts. Accounts_data, instead, contains all the information related to the banking accounts present in the system. For example, the file Accounts_data/data4.txt contains account owner name, account number and amount of all the accounts related to the network whose adjacenty matrix is represented by the file adj_matrices/adj_matr4.txt.  
