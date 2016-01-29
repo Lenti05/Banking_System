@@ -1,1 +1,0 @@
-/Users/pietrolenti/c++_projects/cmake/bin/banking_system/banking_system/CMakeFiles/banking_system.dir
