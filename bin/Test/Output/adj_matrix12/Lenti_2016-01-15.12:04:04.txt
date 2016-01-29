@@ -1,0 +1,16 @@
+User name: Pietro Lenti
+Sent 5000£ to Arya Stark on account number 28793770 on 2016-01-15.12:03:16
+Sent 1000£ to Eddard Stark on account number 22890760 on 2016-01-15.12:04:02
+12
+Pietro Lenti 29780302 5000£
+Pietro Lenti 27698654 4000£
+Arya Stark 28793770 25000£
+Arya Stark 27869679 15678£
+Eddard Stark 22890760 8345£
+Sansa Stark 27977756 12330£
+Sansa Stark 24537545 3425£
+Jaime Lannister 28769654 5643£
+Daenerys Targaryen 26745347 100346£
+Annie Clark 28843900 8000£
+Annie Clark 25889624 2343£
+Tyrion Lannister 29970975 9804£

@@ -1,0 +1,11 @@
+I have executed and tested my programs with Mac OS X using both CMake and Xcode. Here,for portability sake, I have included the cmakelists files necessary to compile the programs with CMake. To run the program with a differnt OS, you need just to provide slight modifications to file Cmakelists.txt to take into account the different in the file system.
+To build the executable file, you should go to the directory where you want to store the file and type cmake followed by the name of the directory containing the source files. For building this program you have to go to the folder my_projects/bin/banking_system/banking_system and type:
+ 
+"cmake path_to_folder_containing_my_projects/my_projects/source/banking_system" 
+
+This will generate the build files necessary for compilation. To compile the source files, type "make". Every time you edit  a source file you have to type "make" again to recompile the files. At this point, you need just to run the executable file to start the program.
+To execute this program is necessary to install the library boost/asio (http://www.boost.org/doc/libs/1_60_0/doc/html/boost_asio.html)
+to take advantage of its networking facilities (TCP sockets are used in the program). Once the library has been installed, you should indicate in the file cmakelists.txt the path to library "libboost_system.a" and to header files "boost/asio.hpp" (OSs different from Mac OS X have different files containing the library to link and the header files to include).
+
+Running the program both with CMake and Xcode I noticed a marked difference in the number of threads that is possible to use before the 
+OS starts complain about the high amount of open files in the system. With CMake this number is 12 threads, whereas with Xcode it seems to be much higher for I tested the program with 60 threads (nodes) and still it worked smoothly.

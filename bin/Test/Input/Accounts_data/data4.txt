@@ -1,0 +1,5 @@
+4
+Pietro Lenti 29780302 10000
+Arya Stark 28793770 20000
+Jaime Lannister 28745690 78986
+Daenerys Targaryen 26745347 100346

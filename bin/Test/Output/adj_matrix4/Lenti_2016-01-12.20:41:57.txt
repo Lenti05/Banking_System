@@ -1,0 +1,8 @@
+User name: Pietro Lenti
+Sent 5000£ to Arya Stark on account number 28793770 on 2016-01-12.20:41:02
+Sent 2000£ to Jaime Lannister on account number 28745690 on 2016-01-12.20:41:55
+4
+Pietro Lenti 29780302 3000£
+Arya Stark 28793770 25000£
+Jaime Lannister 28745690 80986£
+Daenerys Targaryen 26745347 100346£

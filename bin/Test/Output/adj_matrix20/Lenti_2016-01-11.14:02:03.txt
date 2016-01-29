@@ -1,0 +1,23 @@
+User name: Pietro Lenti
+Sent 5000£ to Tyrion Lannister on account number 29970975 on 2016-01-11.14:02:01
+20
+Pietro Lenti 29780302 5000£
+Pietro Lenti 27698654 5000£
+Pietro Lenti 25467896 3250£
+Arya Stark 28793770 20000£
+Arya Stark 27869679 15678£
+Arya Stark 27355673 5433£
+Eddard Stark 22890760 7345£
+Eddard Stark 25626554 8000£
+Eddard Stark 28778967 7655£
+Sansa Stark 27977756 12330£
+Sansa Stark 24537545 3425£
+Sansa Stark 25876662 5000£
+Jaime Lannister 28769654 5643£
+Jaime Lannister 27879868 3000£
+Jaime Lannister 27768757 9000£
+Daenerys Targaryen 26745347 100346£
+Daenerys Targaryen 28965753 20000£
+Annie Clark 28843900 8000£
+Annie Clark 25889624 2343£
+Tyrion Lannister 29970975 14804£

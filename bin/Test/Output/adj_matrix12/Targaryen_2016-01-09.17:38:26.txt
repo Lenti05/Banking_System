@@ -1,0 +1,18 @@
+User name: Daenerys Targaryen
+Sent 5000£ to Eddard Stark on account number 22890760 on 2016-01-09.17:34:37
+Sent 3990£ to Eddard Stark on account number 22890760 on 2016-01-09.17:35:27
+Sent 5000£ to Eddard Stark on account number 22890760 on 2016-01-09.17:36:08
+Sent 10000£ to Sansa Stark on account number 24537545 on 2016-01-09.17:37:55
+12
+Pietro Lenti 29780302 10000£
+Pietro Lenti 27698654 5000£
+Arya Stark 28793770 20000£
+Arya Stark 27869679 15678£
+Eddard Stark 22890760 21335£
+Sansa Stark 27977756 12330£
+Sansa Stark 24537545 13425£
+Jaime Lannister 28769654 5643£
+Daenerys Targaryen 26745347 76356£
+Annie Clark 28843900 8000£
+Annie Clark 25889624 2343£
+Tyrion Lannister 29970975 9804£
