@@ -42,6 +42,7 @@ tcp_writer: each node must instantiate a tcp_writer object to communicate with a
 to: template function that just converts a type into another one.
 How to compile and run
 
+
 I have executed and tested the program with Mac OS X using both CMake and Xcode. Here, for portability sake, I have included the cmakelists files necessary to compile the programs with CMake. To run the program with a different OS, you need just to provide slight modifications to file Banking_System/source/cmakelists.txt to take into account the difference in the file system. To build the executable file, you should go to the directory where you want to store the file and type cmake followed by the path leading to the directory containing the source files. For building this program you have to go to the folder Banking_System/bin/banking_system and type:
 
 "cmake path_to_folder_containing_the_project/Banking_System/source"
