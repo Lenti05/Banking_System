@@ -22,6 +22,7 @@
 #include "Shortest_paths.hpp"
 #include "File_ptr.hpp"
 #include "split.hpp"
+#include "guarded_thread.hpp"
 
 using std::vector;
 using std::string;
@@ -263,9 +264,9 @@ void calculate_shortest_paths( account_queue_source message_queue, const int nod
     // The main thread sends a message to the receiving account in order to calculate all the shortest paths (one for each node)
     // leading to that account. The receiving account is identified as the source node in the asynchronous Bellman
     // Ford algorithm.
-    vector<std::thread> t_nodes;
+    vector<guarded_thread> t_nodes;
     for(int i=0; i< nodes_number; i++)
-        t_nodes.push_back(std::thread{vector_nodes[i]});
+        t_nodes.push_back(guarded_thread{vector_nodes[i]});
     char line[Message::max_body_length + 1];
     std::strcpy(line, ("calculate_shortest_paths " ));
     Message msg;
@@ -273,15 +274,11 @@ void calculate_shortest_paths( account_queue_source message_queue, const int nod
     std::memcpy(msg.body(), line, msg.body_length());
     msg.encode_header();
     message_queue.put(msg);
-    for(int i=0; i< nodes_number; i++)
-    {
-        t_nodes[i].join();
-    }
 }
 
 void transfer_amount(account_queue_from queue_from, const int from_index, const int to_index, amount amount, const int nodes_number, vector<Node>& vector_nodes)
 {
-    vector<std::thread> t_nodes;
+    vector<guarded_thread> t_nodes;
     vector<Node> nodes;
     int previous_index = -1;
     int current_index = from_index;
@@ -296,7 +293,7 @@ void transfer_amount(account_queue_from queue_from, const int from_index, const 
      vector<Edge> sub_edges = vector_nodes[current_index].get_sub_adj_edges(sub_indices);
      nodes.push_back(vector_nodes[current_index]);
      nodes[i].initialize_edges(sub_edges);
-     t_nodes.push_back(std::thread{nodes[i]});
+     t_nodes.push_back(guarded_thread{nodes[i]});
      previous_index = current_index;
      current_index = following_index;
      following_index = vector_nodes[following_index].get_parent_index(to_index);
@@ -307,7 +304,7 @@ void transfer_amount(account_queue_from queue_from, const int from_index, const 
     vector<Edge> sub_edges = vector_nodes[current_index].get_sub_adj_edges(sub_indices);
     nodes.push_back(vector_nodes[current_index]);
     nodes[i].initialize_edges(sub_edges);
-    t_nodes.push_back(std::thread{nodes[i]});
+    t_nodes.push_back(guarded_thread{nodes[i]});
     count_nodes++;
     char line[Message::max_body_length + 1];
     const int sender_index = -1;
@@ -318,10 +315,6 @@ void transfer_amount(account_queue_from queue_from, const int from_index, const 
     std::memcpy(msg.body(), line, msg.body_length());
     msg.encode_header();
     queue_from.put(msg);
-    for(int i = 0 ; i< count_nodes ; i++)
-    {
-        t_nodes[i].join();
-    }
     std::cout << "The transaction has been completed successfully" << "\n" << "\n";
 }
 

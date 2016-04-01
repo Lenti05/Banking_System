@@ -9,6 +9,7 @@
 #include <thread>
 #include "Node.hpp"
 #include "split.hpp"
+#include "guarded_thread.hpp"
 
 
 using std::vector;
@@ -320,7 +321,7 @@ void Node::answer_to_finished(Message& msg)
 // server thread), gets messages from the head of the message queue and process them calling the correspondig function.
 void Node::operator()(){
     handler.set_num_connections(adj_edges.size());
-    thread t{handler};
+    guarded_thread t{handler};
     boost::asio::io_service io_service;
     while(!interrupt)
     {
