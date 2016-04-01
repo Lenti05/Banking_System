@@ -1,5 +1,6 @@
 Banking_System
-Description
+
+DESCRIPTION
 
 This is a simple banking accounts system that permits users to transfer money from one of their accounts to the desiderated account. An accurate description of the system is contained in the file Banking_System/source/program_description.docx.
 Input
@@ -11,13 +12,16 @@ Output files are contained within the folder Banking_System/bin/Test/Output and 
 Dependencies
 
 To execute this program is necessary to install the library boost/asio (http://www.boost.org/doc/libs/1_60_0/doc/html/boost_asio.html), for TCP sockets are used by nodes to communicate and C++ doesn't have standard libraries for networking.
-Contents (source folder)
+
+CONTENTS (source folder)
 
 Account: it is the class containing all the data related to a banking account.
 
 Edge: this class contains all the data associated to the edge connecting node i to node j.
 
 File_ptr: RAII class for input and output files.
+
+guarded_thread: RAII class for std::thread.
 
 Handler: handler class used by Node class to handle connections and incoming messages from neighbor nodes.
 
